@@ -1,0 +1,9 @@
+/*
+!.gitignore
+.DS_Store
+*.DS_Store
+
+
+!KATAS/
+!task.js
+!index.html
