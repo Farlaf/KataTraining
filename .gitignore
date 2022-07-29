@@ -2,6 +2,8 @@
 !.gitignore
 .DS_Store
 *.DS_Store
+.nova
+*.nova
 
 
 !KATAS/
