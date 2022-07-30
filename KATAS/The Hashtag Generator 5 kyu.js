@@ -28,3 +28,18 @@ console.log(generateHashtag(" ".repeat(200)));
 console.log(generateHashtag(""));
 console.log(generateHashtag("Do We   have A Hashtag"));
 console.log(generateHashtag("Codewars is nice"));
+
+
+// Like it
+/*
+
+function generateHashtag (str) {
+
+  var hashtag = str.split(' ').reduce(function(tag, word) {
+	return tag + word.charAt(0).toUpperCase() + word.substring(1);
+  }, '#');
+
+  return hashtag.length == 1 || hashtag.length > 140 ? false : hashtag;
+}
+
+*/
