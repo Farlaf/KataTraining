@@ -1,30 +1,37 @@
-// * The Hashtag Generator 5 kyu
-// * https://www.codewars.com/kata/52449b062fb80683ec000024/train/javascript
+// * Next bigger number with the same digits 4 kyu
+// * https://www.codewars.com/kata/55983863da40caa2c900004e/train/javascript
+
 /*
+Create a function that takes a positive integer and returns the next bigger number that can be formed by rearranging its digits. For example:
 
-The marketing team is spending way too much time typing in hashtags.
-Let's help them with our own Hashtag Generator!
+12 ==> 21
+513 ==> 531
+2017 ==> 2071
+nextBigger(num: 12)   // returns 21
+nextBigger(num: 513)  // returns 531
+nextBigger(num: 2017) // returns 2071
 
-Here's the deal:
+If the digits can't be rearranged to form a bigger number, return -1 (or nil in Swift):
 
-It must start with a hashtag (#).
-All words must have their first letter capitalized.
-If the final result is longer than 140 chars it must return false.
-If the input or the result is an empty string it must return false.
-
+9 ==> -1
+111 ==> -1
+531 ==> -1
+nextBigger(num: 9)   // returns nil
+nextBigger(num: 111) // returns nil
+nextBigger(num: 531) // returns nil
 */
 
-function generateHashtag (str) {
-	str = str.replace(/\s+/g, ' ');
-	if (str == " " || str.length == 0) return false;
-
-  str = "#" + str.split(' ').map((item) => item.charAt(0).toUpperCase()+item.slice(1)).join('');
-
-	return str.length <= 140 ? str : false
+function nextBigger(n){
+  // 1. сгенерировать массив возможных вариантов
+  // 2. отфильтровать и оставить только те что больше
+  // 3. отсортировать
+  // 4. вывести первый или -1 если массив пустой
 }
 
-//TEST
-console.log(generateHashtag(" ".repeat(200)));
-console.log(generateHashtag(""));
-console.log(generateHashtag("Do We   have A Hashtag"));
-console.log(generateHashtag("Codewars is nice"));
+// Тесты
+console.log( nextBigger(12) );
+console.log( nextBigger(513) );
+console.log( nextBigger(531) );
+console.log( nextBigger(111) );
+console.log( nextBigger(9) );
+
